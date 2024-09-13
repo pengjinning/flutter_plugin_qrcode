@@ -1,3 +1,11 @@
+/*
+ * @Author: jack ning github@bytedesk.com
+ * @Date: 2024-09-13 17:54:38
+ * @LastEditors: jack ning github@bytedesk.com
+ * @LastEditTime: 2024-09-13 18:16:18
+ * @FilePath: /example/lib/main.dart
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -18,7 +26,6 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
   }
-
 
   Future<void> getQrcodeState() async {
     String qrcode;
@@ -42,11 +49,10 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Flutter QRCode Plugin example app'),
         ),
         body: Center(
-
-          child: FlatButton(onPressed: (){
-            getQrcodeState();
-
-          },
+          child: TextButton(
+              onPressed: () {
+                getQrcodeState();
+              },
               child: Text('$_qrcode')),
         ),
       ),
